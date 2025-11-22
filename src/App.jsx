@@ -31,15 +31,17 @@ const App = () => {
 
             {/* Height */}
             <label htmlFor="Height"> Height (cm)</label>
-            <input type="number" placeholder="Example: 150" id="Height"/>
+            <input type="number" placeholder="Example: 150" id="Height" value={height}
+                   onChange={(e) => setHeight(e.target.value)}/>
 
             {/* Weight */}
             <label htmlFor="Weight">Weight (kg)</label>
-            <input type="number" placeholder="Example: 50" id="Weight"/>
+            <input type="number" placeholder="Example: 50" id="Weight" value={weight}
+                   onChange={(e) => setWeight(e.target.value)}/>
 
             <button onClick={bmiFormula}>Calculate BMI</button>
 
-            <div className="results">Testing</div>
+            <div className="results">{results}</div>
 
         </div>
     </div>;
