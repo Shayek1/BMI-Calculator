@@ -16,6 +16,7 @@ const App = () => {
 
             <button>Calculate BMI</button>
 
+            <div className="results">Testing</div>
 
         </div>
     </div>;
