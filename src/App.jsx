@@ -15,11 +15,11 @@ const App = () => {
         const bmiCalc = (weight / ((height/100) * (height/100)))
         const bmiWholeNumber = bmiCalc.toFixed(1);
 
-        let bmiDivision = "";
-        if (0 < bmiWholeNumber < 18.5) bmiDivision = "UNDERWEIGHT";
-        else if (bmiDivision < 25) bmiDivision = "NORMAL WEIGHT";
-        else if (bmiDivision < 30) bmiDivision = "OVERWEIGHT";
-        else if (bmiDivision < 40) bmiDivision = "OBESE";
+        let bmiDivision = " ";
+        if (bmiWholeNumber < 18.5) bmiDivision = "UNDERWEIGHT";
+        else if (bmiWholeNumber < 25) bmiDivision = "NORMAL WEIGHT";
+        else if (bmiWholeNumber < 30) bmiDivision = "OVERWEIGHT";
+        else if (bmiWholeNumber < 40) bmiDivision = "OBESE";
         else bmiDivision = "MORBIDLY OBESE";
 
         setResults(`Your BMI is ${bmiWholeNumber} : You fall in the ${bmiDivision} category`);
