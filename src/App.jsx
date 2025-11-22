@@ -9,7 +9,8 @@ const App = () => {
     const bmiFormula = () => {
         if (!weight || !height) {
             setResults("Enter your height and weight");
-        }
+        }else if(weight === " " || height === " "){setResults(" ")}
+        else{
 
         const bmiCalc = (weight / ((height/100) * (height/100)))
         const bmiWholeNumber = bmiCalc.toFixed(1);
@@ -22,6 +23,7 @@ const App = () => {
         else bmiDivision = "MORBIDLY OBESE";
 
         setResults(`Your BMI is ${bmiWholeNumber} : You fall in the ${bmiDivision} category`);
+        }
     }
 
     return <div>
