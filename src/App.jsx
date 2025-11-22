@@ -9,13 +9,13 @@ const App = () => {
     const bmiFormula = () => {
         if (!weight || !height) {
             setResults("Enter your height and weight");
-        }else if(weight === " " || height === " "){setResults(" ")}
+        } else if(weight === " " || height === " "){setResults(" ")}
         else{
 
         const bmiCalc = (weight / ((height/100) * (height/100)))
         const bmiWholeNumber = bmiCalc.toFixed(1);
 
-        let bmiDivision = " ";
+        let bmiDivision;
         if (bmiWholeNumber < 18.5) bmiDivision = "UNDERWEIGHT";
         else if (bmiWholeNumber < 25) bmiDivision = "NORMAL WEIGHT";
         else if (bmiWholeNumber < 30) bmiDivision = "OVERWEIGHT";
@@ -24,6 +24,12 @@ const App = () => {
 
         setResults(`Your BMI is ${bmiWholeNumber} : You fall in the ${bmiDivision} category`);
         }
+    }
+
+    const reset = () => {
+        setHeight('');
+        setWeight('')
+        setResults("Let's find out your BMI!");
     }
 
     return <div>
@@ -44,6 +50,9 @@ const App = () => {
             <button onClick={bmiFormula}>Calculate BMI</button>
 
             <div className="results">{results}</div>
+
+            <button onClick={reset}> Reset </button>
+
 
         </div>
     </div>;
