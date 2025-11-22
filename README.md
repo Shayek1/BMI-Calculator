@@ -11,3 +11,7 @@ The user is also given the category their BMI falls under.
 
 ### This is what happens once the user inputs their values
 ![After a calculation](src/assets/bmiAfterACalculation.png)
+
+
+#### To do list:
+- Allow imperial unit inputs
