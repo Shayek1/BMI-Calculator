@@ -14,8 +14,7 @@ const App = () => {
             <label htmlFor="Weight">Weight (kg)</label>
             <input type="number" placeholder="Example: 50" id="Weight"/>
 
-            <Button>Calculate BMI</Button>
-
+            <button>Calculate BMI</button>
 
 
         </div>
